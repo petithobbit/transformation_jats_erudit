@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE banque SYSTEM "correspondances.dtd">
+<banque date_version="2016-10-17" modelisation="Isabelle Bastien">
+    <correspondance auteur="IB">
+        <el_jats>article</el_jats>
+        <el_erudit>article</el_erudit>
+        <type_correspondance><specifique/></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+    <correspondance auteur="IB">
+        <el_jats></el_jats>
+        <el_erudit></el_erudit>
+        <type_correspondance></type_correspondance>
+    </correspondance>
+</banque>

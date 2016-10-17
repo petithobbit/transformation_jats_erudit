@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--DTD correspondances JATS-Érudit
+   Version 1.0                                                             
+   Créée le 2016-10-17
+   Révisée
+
+        Auteur : Isabelle Bastien, étudiante M.S.I EBSI
+        Courriel : isabelle.bastien@umontreal.ca -->
+
+<!ELEMENT banque (correspondance+)>
+<!ATTLIST banque version_jats CDATA #FIXED "dtd 1.1" >
+<!ATTLIST banque version_jats_reference CDATA #FIXED "https://jats.nlm.nih.gov/archiving/tag-library/1.1/index.html" >
+<!ATTLIST banque version_erudit CDATA #FIXED "schema 3.0.0" >
+<!ATTLIST banque version_erudit_reference CDATA #FIXED "http://www.erudit.org/xsd/article/3.0.0/doc/" >
+<!ATTLIST banque date_version CDATA #REQUIRED >
+<!ATTLIST banque modelisation CDATA #REQUIRED>
+<!ATTLIST banque collaboration CDATA #IMPLIED >
+
+<!ELEMENT correspondance (el_jats, el_erudit, type_correspondance, (commentaires, boilerplate?))? >
+<!ATTLIST correspondance auteur CDATA "IB" >
+
+<!ELEMENT el_jats (#PCDATA)>
+<!ATTLIST el_jats reference NMTOKEN #IMPLIED >
+<!ELEMENT el_erudit (#PCDATA) >
+<!-- le type de correspondance est entrevu du point de vue de l'élément Érudit. Par ex., "specifique" veut dire que l'élément Érudit est inclus 
+dans l'élément JATS, qui a une portée plus grande, et "generique" veut dire que l'élément Érudit est plus vaste que celui de JATS-->
+<!ELEMENT type_correspondance (parfaite | specifique | generique | absente) >
+
+    <!ELEMENT parfaite EMPTY>
+    <!ELEMENT incluse EMPTY >
+    <!ELEMENT partielle EMPTY >
+
+<!ELEMENT commentaires (#PCDATA) >
+<!ELEMENT boilerplate (#PCDATA)>
