@@ -2,9 +2,15 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output method="xml" indent="yes" encoding="iso-8859-1"/>
 
+
+    <!-- IB 2016-10-20 : Section "corps" en cours, besoin de voir quelles valeurs d'attributs seront utilisées
+    pour structurer l'intrant.-->
+
     <!-- IB 2016-10-20 : le script génère automatiquement des attributs "xmlns" dans l'extrant pour certains éléments
-    et je ne sais pas pourquoi. P.ex. : droitsauteur/nomorg -->
-    
+    et je ne sais pas pourquoi. P.ex. : droitsauteur/nomorg 
+        IB ajout 2016-10-20: remplacé certains éléments littéraux par l'utilisation de <xsl:element/> et <xsl:attribute/>
+    et déclaré le namespace dans certains d'entres eux, en cours. pour l'instant, disparition d'ajout des attributs "xmlns" dans l'extrant-->
+
     <!-- IB 2016-10-19 : Preuve de concept. Prototype script pour validation Version 1.0
             Stratégie utilisée pour le script: 
             Réécriture complète de l'article en suivant l'arborescence du Schéma Érudit.
@@ -51,12 +57,17 @@
 
             <!-- ========================= el structurant admin (OBL) ==================================-->
 
-            <admin>
-                <infoarticle>
+            <xsl:element name="admin" namespace="http://www.erudit.org/xsd/article">
+                <xsl:element name="infoarticle" namespace="http://www.erudit.org/xsd/article">
                     <!--IB 2016-10-19 : attribut "scheme" #required, donc considéré comme boilerplate -->
-                    <idpublic scheme="doi">
+                    <xsl:element name="idpublic">
+                        <xsl:attribute name="scheme">
+                            <xsl:value-of select="'doi'"/>
+                        </xsl:attribute>
+                        <!--<idpublic scheme="doi">
                         <xsl:value-of select="//article-meta/article-id[@pub-id-type='doi']"/>
-                    </idpublic>
+                    </idpublic>-->
+                    </xsl:element>
                     <grdescripteur lang="fr" scheme="http://rameau.bnf.fr">
                         <xsl:for-each select="//subj-group[@subj-group-type='heading']">
                             <descripteur>
@@ -84,7 +95,7 @@
                         <xsl:value-of select="count(//ref[@id])"/>
                     </nbrefbiblio>
                     <nbnote/>
-                </infoarticle>
+                </xsl:element>
 
                 <!-- les attributs de "revue": "id" et "lang" sont du boilerplate, pas de correspondances trouvées-->
                 <revue id="sp01868" lang="fr">
@@ -198,23 +209,98 @@
                 <droitsauteur>
                     <xsl:apply-templates select="//permissions"/>
                 </droitsauteur>
-            </admin>
+            </xsl:element>
             <!-- ========================= el structurant Liminaire (OBL)==================================-->
             <liminaire>
-                <grtitre/>
-                <grauteur/>
+                <grtitre>
+                    <xsl:value-of select="//article-meta/title-group/article-title"/>
+                </grtitre>
+                <grauteur>
+                    <xsl:for-each
+                        select="//article-meta/contrib-group/contrib[@contrib-type='author']">
+                        <auteur id="{current()/@id}">
+                            <nompers>
+                                <prenom>
+                                    <xsl:value-of select="./name/given-names"/>
+                                </prenom>
+                                <nomfamille>
+                                    <xsl:value-of select="./name/surname"/>
+                                </nomfamille>
+                            </nompers>
+                        </auteur>
+                    </xsl:for-each>
+                </grauteur>
+                <resume lang="fr">
+                    <xsl:apply-templates
+                        select="//article-meta/abstract[@abstract-type='executive-summary']"/>
+                </resume>
+                <xsl:element name="grmotcle" namespace="http://www.erudit.org/xsd/article">
+                    <xsl:attribute name="lang">
+                        <xsl:value-of select="'fr'"/>
+                    </xsl:attribute>
+                    <xsl:apply-templates
+                        select="//article-meta/kwd-group[@kwd-group-type='author-keywords']"/>
+                </xsl:element>
             </liminaire>
-            <!-- ========================= el structurant corps (OBL) ==================================-->
-            <corps>
-                <section1> </section1>
-            </corps>
+            <!-- ========================= el structurant corps (OBL) EN COURS==================================-->
+            <xsl:element name="corps" namespace="http://www.erudit.org/xsd/article">
+                <xsl:element name="section1" namespace="http://www.erudit.org/xsd/article">
+                    <xsl:apply-templates select="//body"/>
+                </xsl:element>
+            </xsl:element>
+            <!-- ========================= el structurant partiesann (FAC) ==================================-->
 
         </article>
 
     </xsl:template>
-    <!-- Templates -->
-    <!-- droitsauteur -->
+    <!-- ====================================== Templates ==================================-->
 
+
+
+
+    <!-- section1 -->
+    <xsl:template match="//body">
+        <!-- regex pour nom de valeur d'attribut? -->
+        <xsl:for-each select="sec[@id='s1']">
+            <xsl:if test="./title">
+                <xsl:element name="titre" namespace="http://www.erudit.org/xsd/article">
+                    <xsl:value-of select="./title"/>
+                </xsl:element>
+            </xsl:if>
+            <xsl:for-each select="./p">
+                <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
+                    <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
+                        <xsl:value-of select="current()"/>
+                    </xsl:element>
+                </xsl:element>
+            </xsl:for-each>
+        </xsl:for-each>
+    </xsl:template>
+
+
+    <!-- el grmotcle -->
+    <xsl:template match="//article-meta/kwd-group[@kwd-group-type='author-keywords']">
+        <xsl:for-each select="//article-meta/kwd-group[@kwd-group-type='author-keywords']/kwd">
+            <xsl:element name="motcle" namespace="http://www.erudit.org/xsd/article">
+                <xsl:value-of select="current()"/>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+
+    <!-- resume -->
+    <!-- voir s'il faut mettre en place un "catch" pour empêcher l'affichage du dernier <p> qui, 
+   dans les artéfacts fournis, montrent un doi et non du texte-->
+    <xsl:template match="//article-meta/abstract[@abstract-type='executive-summary']">
+        <xsl:for-each select="//article-meta/abstract[@abstract-type='executive-summary']/p">
+            <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
+                <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
+                    <xsl:value-of select="current()"/>
+                </xsl:element>
+            </xsl:element>
+        </xsl:for-each>
+    </xsl:template>
+
+    <!-- droitsauteur -->
     <xsl:template match="//permissions">
         <xsl:value-of select="license/license-p"/>
         <nomorg>

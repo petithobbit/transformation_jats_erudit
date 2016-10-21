@@ -1,87 +1,332 @@
 <?xml version="1.0" encoding="iso-8859-1"?>
 <article xmlns:xlink="http://www.w3.org/1999/xlink"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns="http://www.erudit.org/xsd/article"
-    xsi:schemaLocation="http://www.erudit.org/xsd/article http://www.erudit.org/xsd/article/3.0.0/eruditarticle.xsd"
-    qualtraitement="complet"
-    idproprio="00007"
-    typeart="autre"
-    lang="fr"
-    ordseq="1">
-    <admin>
-        <infoarticle>
-            <idpublic scheme="doi">10.7554/eLife.00007</idpublic>
-            <grdescripteur lang="fr" scheme="http://rameau.bnf.fr">
-                <descripteur>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://www.erudit.org/xsd/article"
+         xsi:schemaLocation="http://www.erudit.org/xsd/article http://www.erudit.org/xsd/article/3.0.0/eruditarticle.xsd"
+         qualtraitement="complet"
+         idproprio="00007"
+         typeart="autre"
+         lang="fr"
+         ordseq="1">
+   <admin>
+      <infoarticle>
+         <idpublic scheme="doi"/>
+         <grdescripteur lang="fr" scheme="http://rameau.bnf.fr">
+            <descripteur>
                     Genomics and Evolutionary Biology
                 </descripteur>
-                <descripteur>
+            <descripteur>
                     Plant Biology
                 </descripteur>
-            </grdescripteur>
-            <nbpara>142</nbpara>
-            <nbmot/>
-            <nbfig>10</nbfig>
-            <nbtabl>4</nbtabl>
-            <nbimage/>
-            <nbaudio/>
-            <nbvideo/>
-            <nbrefbiblio>62</nbrefbiblio>
-            <nbnote/>
-        </infoarticle>
-        <revue id="sp01868" lang="fr">
-            <titrerev>eLife 
-                test italique</titrerev>
-            <titrerevabr>EL</titrerevabr>
-            <idissnnum>2050-084X</idissnnum>
-            <directeur>
-                <nompers>
-                    <prenom>Detlef</prenom>
-                    <nomfamille>Weigel</nomfamille>
-                </nompers>
-            </directeur>
-            <redacteurchef typerc="invite">
-                <fonction lang="fr">testeur de script</fonction>
-                <nompers>
-                    <prenom>Fou</prenom>
-                    <nomfamille>Barre</nomfamille>
-                </nompers>
-            </redacteurchef>
-        </revue>
-        <numero id="lorem-ipsum">
-            <pub>
-                <annee>2012</annee>
-            </pub>
-            <pubnum>
-                <date>2012-10-15</date>
-            </pubnum>
-        </numero>
-        <editeur>
-            <nomorg/>
-        </editeur>
-        <prod>
-            <nomorg/>
-        </prod>
-        <prodnum>
-            <nomorg/>
-        </prodnum>
-        <diffnum>
-            <nomorg/>
-        </diffnum>
-        <histpapier>
-            <alinea>néant</alinea>
-        </histpapier>
-        <schema nom="Erudit Article" version="3.0.0" lang="fr"/>
-        <droitsauteur>This article is distributed under the terms of the Creative
-            Commons Attribution License, which permits unrestricted use
-            and redistribution provided that the original author and source are
-            credited.<nomorg xmlns="">Schuman et al</nomorg>, 2012</droitsauteur>
-    </admin>
-    <liminaire>
-        <grtitre/>
-        <grauteur/>
-    </liminaire>
-    <corps>
-        <section1/>
-    </corps>
+         </grdescripteur>
+         <nbpara>142</nbpara>
+         <nbmot/>
+         <nbfig>10</nbfig>
+         <nbtabl>4</nbtabl>
+         <nbimage/>
+         <nbaudio/>
+         <nbvideo/>
+         <nbrefbiblio>62</nbrefbiblio>
+         <nbnote/>
+      </infoarticle>
+      <revue id="sp01868" lang="fr">
+         <titrerev>eLife 
+                    test italique</titrerev>
+         <titrerevabr>EL</titrerevabr>
+         <idissnnum>2050-084X</idissnnum>
+         <directeur>
+            <nompers>
+               <prenom>Detlef</prenom>
+               <nomfamille>Weigel</nomfamille>
+            </nompers>
+         </directeur>
+         <redacteurchef typerc="invite">
+            <fonction lang="fr">testeur de script</fonction>
+            <nompers>
+               <prenom>Fou</prenom>
+               <nomfamille>Barre</nomfamille>
+            </nompers>
+         </redacteurchef>
+      </revue>
+      <numero id="lorem-ipsum">
+         <pub>
+            <annee>2012</annee>
+         </pub>
+         <pubnum>
+            <date>2012-10-15</date>
+         </pubnum>
+      </numero>
+      <editeur>
+         <nomorg/>
+      </editeur>
+      <prod>
+         <nomorg/>
+      </prod>
+      <prodnum>
+         <nomorg/>
+      </prodnum>
+      <diffnum>
+         <nomorg/>
+      </diffnum>
+      <histpapier>
+         <alinea>néant</alinea>
+      </histpapier>
+      <schema nom="Erudit Article" version="3.0.0" lang="fr"/>
+      <droitsauteur>This article is distributed under the terms of the Creative
+                            Commons Attribution License, which permits unrestricted use
+                        and redistribution provided that the original author and source are
+                        credited.<nomorg xmlns="">Schuman et al</nomorg>, 2012</droitsauteur>
+   </admin>
+   <liminaire>
+      <grtitre>Herbivory-induced volatiles function as defenses increasing fitness
+                    of the native plant Nicotiana attenuata in
+                    nature</grtitre>
+      <grauteur>
+         <auteur id="author-1399">
+            <nompers>
+               <prenom>Meredith C</prenom>
+               <nomfamille>Schuman</nomfamille>
+            </nompers>
+         </auteur>
+         <auteur id="author-1400">
+            <nompers>
+               <prenom>Kathleen</prenom>
+               <nomfamille>Barthel</nomfamille>
+            </nompers>
+         </auteur>
+         <auteur id="author-1013">
+            <nompers>
+               <prenom>Ian T</prenom>
+               <nomfamille>Baldwin</nomfamille>
+            </nompers>
+         </auteur>
+      </grauteur>
+      <resume lang="fr">
+         <alinea>
+            <para>
+               <alinea>As the population of the world continues to increase beyond 7 billion, and
+                    agricultural pests continue to rapidly evolve resistance to pesticides, it is
+                    becoming ever more important to cultivate arable land in a way that is
+                    sustainable for both humans and the environment. A better understanding of the
+                    different mechanisms used by wild plants to deter herbivores will help to
+                    increase crop production without harming the environment.</alinea>
+            </para>
+            <para>
+               <alinea>Plants use both direct and indirect methods to fend off herbivores. Direct
+                    defense methods include the production of chemicals that are toxic to herbivores
+                    or give them indigestion, and the growth of sticky prickles and spines that can
+                    injure or kill the herbivore. Indirect defense methods, on the other hand,
+                    generally rely on the plant attracting organisms that are either predators or
+                    parasites of the herbivore.</alinea>
+            </para>
+            <para>
+               <alinea>Plants produce odors known as herbivory-induced plant volatiles (HIPVs) that are
+                    thought to offer indirect defense against herbivores by betraying their location
+                    to predators and parasites. However, HIPVs also influence other members of the
+                    ecological community, sometimes in ways that are detrimental to plants.
+                    Moreover, despite 30 years of research, no study has demonstrated that HIPVs
+                    increase the fitness of a plant, so it is unclear what they have evolved to
+                    do.</alinea>
+            </para>
+            <para>
+               <alinea>Now, a 2-year field study by Schuman et al. has shown plants
+                    that emit green leaf volatiles (which are a type of HIPV) produce twice as many
+                    buds and flowers&#x2014;a measure of fitness&#x2014;as plants that have been genetically
+                    engineered not to emit green leaf volatiles. This study was conducted with
+                        Nicotiana attenuata, which is a wild tobacco plant that is
+                    often targeted by Manduca sexta, a type of moth that is also
+                    known as the tobacco hornworm. Green leaf volatiles only increased plants'
+                    fitness when various species of Geocoris&#x2014;a bug that preys on
+                        Manduca sexta&#x2014;reduced the number of herbivores by a factor
+                    of two. This is the first evidence that HIPVs offer indirect defense against
+                    herbivores.</alinea>
+            </para>
+            <para>
+               <alinea>Schuman et al. also studied the effects of molecules called
+                    protease inhibitors that are thought to function as direct defenses by making it
+                    difficult for herbivores to digest plants. They found that the ability to
+                    produce protease inhibitors did not increase the fitness of plants under
+                    herbivore attack; however, tobacco hornworms that had been fed plants containing
+                    protease inhibitors were found to be more sluggish in response to attack, which
+                    suggests that protease inhibitors can enhance the indirect defenses of plants.
+                    The results suggest that employing both direct and indirect defenses&#x2014;such as a
+                    combination of biological pesticides and genetic engineering to produce both
+                    HIPVs and protease inhibitors&#x2014;is the best approach for defending agricultural
+                    plants against pests.</alinea>
+            </para>
+            <para>
+               <alinea>
+                    DOI:
+                    http://dx.doi.org/10.7554/eLife.00007.002
+                </alinea>
+            </para>
+         </alinea>
+      </resume>
+      <grmotcle lang="fr">
+         <motcle>Nicotiana attenuata</motcle>
+         <motcle>herbivory-induced plant volatile</motcle>
+         <motcle>plant-predator interaction</motcle>
+         <motcle>green leaf volatile</motcle>
+         <motcle>trypsin protease inhibitor</motcle>
+         <motcle>indirect defense</motcle>
+      </grmotcle>
+   </liminaire>
+   <corps>
+      <section1>
+         <titre>Introduction</titre>
+         <para>
+            <alinea>Plant indirect defenses are traits that disable or remove herbivores by manipulating
+                tri-trophic interactions to the advantage of the plant (Price et al., 1980). They attract and inform the third
+                trophic level, predators or parasitoids, resulting in increased attacks on
+                herbivores (Turlings and Wäckers, 2004).
+                Indirect defenses are widespread and include domatia, extrafloral nectar, and food
+                bodies which provide shelter and nutrition for predators and parasitoids, as well as
+                herbivory-induced plant volatiles (HIPVs) which convey information about feeding
+                herbivores (Heil, 2008). Field studies with
+                the native tobacco Nicotiana attenuata, a desert annual, and with
+                maize have shown that HIPVs can reduce herbivore loads by 24% to more than 90%, by
+                increasing both predation and parasitization of herbivores (Kessler and Baldwin, 2001; Rasmann et al., 2005; Halitschke et
+                    al., 2008; Degenhardt et al.,
+                    2009; Allmann and Baldwin, 2010)
+                and deterring herbivore oviposition (Kessler and
+                    Baldwin, 2001).</alinea>
+         </para>
+         <para>
+            <alinea>If HIPVs really function as defenses, they should increase Darwinian fitness, defined
+                as successful reproduction, for plants under herbivore attack (Karban and Baldwin, 1997). But because HIPVs can be perceived
+                by many other members of the ecological community&#x2014;from herbivores, pollinators,
+                predators and parasitoids to competing or parasitic plants&#x2014;it is not clear whether
+                HIPVs increase plant fitness in nature (Dicke and
+                    Baldwin, 2010; Kessler and Heil,
+                    2011). The field studies described above have either spanned too short a
+                time to reveal Darwinian fitness benefits, or have not reported fitness data at all
+                    (Kessler and Baldwin, 2001; Rasmann et al., 2005; Halitschke et al., 2008; Degenhardt et al., 2009; Allmann and
+                    Baldwin, 2010). Two laboratory studies showed that parasitization of
+                herbivores can increase plant reproduction (van
+                    Loon et al., 2000; Hoballah and
+                    Turlings, 2001), but the parasitization in these studies was not mediated
+                by HIPVs. Hence three decades after their description, it remains unclear whether
+                HIPVs are really indirect defenses.</alinea>
+         </para>
+         <para>
+            <alinea>Long-term field studies comparing HIPV-emitting vs -deficient plants are required in
+                order to demonstrate a defensive function for HIPVs. Experimental additions of pure
+                volatiles or mixes to plants growing in nature has worked well to test short-term
+                effects of specific compounds (Kessler and
+                    Baldwin, 2001; Allmann and Baldwin,
+                    2010), but only endogenously produced HIPV emissions can ensure specific,
+                lasting and consistent differences under field conditions. Most evidence for the
+                utility of HIPVs comes from studies in which predators and parasitoids learn to
+                associate HIPVs with prey; naïve predators and parasitoids are just as likely to
+                respond to HIPVs as not to respond (Allison and
+                    Hare, 2009). Thus the inducibility of HIPV emission, which ensures
+                association with herbivore feeding, is likely essential for HIPV function, but it is
+                difficult to engineer (Kos et al., 2009).
+                Engineered constitutive HIPV emissions have been used, either on predators and
+                parasitoids trained to associate target volatiles with prey in short-term laboratory
+                experiments (Kappers et al., 2005; Schnee et al., 2006), or in set-ups in which
+                target volatiles are always associated with prey (Rasmann et al., 2005; Degenhardt et
+                    al., 2009). When plants are engineered constitutively to emit HIPVs, they
+                no longer provide accurate information about the location of feeding herbivores, and
+                predators will not associate these signals with prey in nature. Genetically
+                silencing the biosynthesis of HIPVs, however, permits naturally inducible wild-type
+                (WT) plants to serve as HIPV emitters, for comparison with transformed lines lacking
+                specific volatile components (Halitschke et al.,
+                    2008; Skibbe et al., 2008).
+                Furthermore, field experiments that manipulate the production of HIPVs which not
+                only attract the third trophic level, but also influence the second trophic level
+                (e.g., as feeding stimulants and host location cues), require additional
+                experimental manipulations to preserve the plant-herbivore part of the tritrophic
+                interaction.</alinea>
+         </para>
+         <para>
+            <alinea>When HIPVs do attract the third trophic level, how can herbivores adapt? Many
+                herbivores can outgrow their vulnerability to predators and parasitoids, but plant
+                direct defenses can slow herbivore growth and prolong vulnerability as postulated by
+                the slow growth-high mortality hypothesis (Benrey
+                    and Denno, 1997; Williams, 1999;
+                    Kessler and Baldwin, 2001, 2004; Kaplan and Thaler, 2011). The solanaceous specialists Manduca
+                    sexta and M. quinquemaculata (Lepidoptera, Sphingidae)
+                are resistant to the potent alkaloid toxin nicotine (Wink and Theile, 2002), but sensitive to the nutritional
+                value of plant tissue (Zavala and Baldwin,
+                    2004). Non-toxic protease inhibitor (PI) proteins, which inhibit protein
+                digestion and thus decrease the availability of organic nitrogen in the form of
+                amino acids (Zavala et al., 2008), are
+                widespread in flowering plants (Hartl et al.,
+                    2011), and trypsin protease inhibitors (TPIs) slow the growth of
+                    M. sexta on N. attenuata (Zavala et al., 2008). However, herbivores can
+                overcome PIs by producing insensitive or desensitized proteases, inactivating or
+                degrading PIs, eating more plant tissue, and eating more nutritious young tissue
+                    (Winterer and Bergelson, 2001; Steppuhn and Baldwin, 2007; Zavala et al., 2008). In the latter two
+                cases, PIs could reduce plant fitness. Although TPI-producing N.
+                    attenuata plants produce more seeds than TPI-deficient plants when
+                attacked by M. sexta under controlled glasshouse conditions (Zavala and Baldwin, 2004), whether TPIs
+                function as a direct defense in nature is unknown.</alinea>
+         </para>
+         <para>
+            <alinea>We tested the hypotheses that HIPVs and TPIs defend plants in nature by increasing
+                herbivore predation and thereby plant Darwinian fitness. To do so, we monitored the
+                performance, predation and mortality of Manduca spp. (M.
+                    sexta and M. quinquemaculata) on wild-type N.
+                    attenuata plants and RNAi transformed lines silenced for the production
+                either of a specific group of HIPVs, or of TPIs, and compared the resulting plant
+                reproductive output in terms of bud and flower production (we are not permitted to
+                allow transgenic plants to disperse ripe seed). Because N.
+                    attenuata is an annual, opportunistic out-crosser, seeds are produced
+                within one growing season, mostly from fertilization via self-pollen (Sime and Baldwin, 2003), and we can relate
+                bud and flower production to lifetime seed production, which is commonly accepted as
+                a measure of Darwinian fitness (Baldwin,
+                    1998; van Loon et al., 2000;
+                    Hoballah and Turlings, 2001).We
+                hypothesized that HIPVs would increase plant reproduction by increasing predation of
+                herbivores, and that TPIs alone would not increase reproduction under herbivore
+                attack, but would either increase predation or increase herbivores' susceptibility
+                to predators. We then assembled a toolbox of wild-type and transgenic lines chosen
+                to test these hypotheses.</alinea>
+         </para>
+         <para>
+            <alinea>We chose a genotype of N. attenuata native to the Great Basin Desert
+                of southwestern Utah. In many years, Manduca spp. larvae cause the
+                most defoliation of N. attenuata plants in this area (Kessler and Baldwin, 2001) and thus the
+                    N. attenuata 'UT' genotype is likely adapted to defend against
+                    Manduca spp. Eggs and young larvae of Manduca
+                spp. are predated by Geocoris spp. (big-eyed bugs) which occur
+                naturally in the Utah habitat and are attracted to components of N.
+                    attenuata's HIPV bouquet (Kessler and
+                    Baldwin, 2001; Halitschke et al.,
+                    2008; Skibbe et al., 2008).
+                Specifically, Utah Geocoris spp. predators are attracted to the
+                sesquiterpene (E)-&#x3b1;-bergamotene as well as green leaf volatiles
+                (fatty acid-derived C6 aldehydes, alcohols and esters) (Kessler and Baldwin, 2001; Halitschke et al., 2008; Schuman et al., 2009). Green leaf volatiles,
+                or GLVs, can be silenced via a single upstream 13-lipoxygenase,
+                    NaLOX2, which specifically supplies lipid hydroperoxides for
+                their production (Allmann et al., 2010).
+                Although GLVs are released upon mechanical damage, the oral secretions (OS) of
+                    M. sexta convert 3-(Z)-GLVs to the
+                    2-(E)-structures, resulting in greater
+                    Geocoris spp. predation than the damage-induced
+                    (Z):(E) ratio (Allmann and Baldwin, 2010). GLVs are released immediately upon
+                damage (Allmann and Baldwin, 2010) and may
+                therefore be a 'first line of defense'.</alinea>
+         </para>
+         <para>
+            <alinea>Like GLVs, many other HIPVs are also released after mechanical damage, but change in
+                amount or ratio upon herbivory, and thus GLVs mirror the functional complexity of
+                the total HIPV blend. Furthermore, GLVs prime or directly regulate responses in
+                neighboring plants (Kessler et al., 2006;
+                    Paschold et al., 2006), attract
+                herbivores as well as predators (Halitschke et
+                    al., 2008), and are important cues for pollinating and ovipositing moths
+                    (Kessler and Baldwin, 2001, 2006; De
+                    Moraes et al., 2001; Fraser et al.,
+                    2003), thus performing several roles which may harm or benefit plant
+                fitness in addition to their role in attracting predators. Perhaps most
+                significantly, GLVs also stimulate Manduca spp. feeding, and
+                silencing plant GLV production results in reduced herbivore damage (Halitschke et al., 2004; Meldau et al., 2009). All these qualities
+                made the manipulation of GLV emissions an ideal means to test rigorously the fitness
+                consequences of HIPV emissions and to evaluate whether these emissions can truly be
+                considered defensive.</alinea>
+         </para>
+      </section1>
+   </corps>
 </article>
