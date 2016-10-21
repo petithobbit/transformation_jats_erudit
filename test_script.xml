@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<article xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns="http://www.erudit.org/xsd/article"
+    xsi:schemaLocation="http://www.erudit.org/xsd/article http://www.erudit.org/xsd/article/3.0.0/eruditarticle.xsd"
+    qualtraitement="complet"
+    idproprio="00007"
+    typeart="autre"
+    lang="fr"
+    ordseq="1">
+    <admin>
+        <infoarticle>
+            <idpublic scheme="doi">10.7554/eLife.00007</idpublic>
+            <grdescripteur lang="fr" scheme="http://rameau.bnf.fr">
+                <descripteur>
+                    Genomics and Evolutionary Biology
+                </descripteur>
+                <descripteur>
+                    Plant Biology
+                </descripteur>
+            </grdescripteur>
+            <nbpara>142</nbpara>
+            <nbmot/>
+            <nbfig>10</nbfig>
+            <nbtabl>4</nbtabl>
+            <nbimage/>
+            <nbaudio/>
+            <nbvideo/>
+            <nbrefbiblio>62</nbrefbiblio>
+            <nbnote/>
+        </infoarticle>
+        <revue id="sp01868" lang="fr">
+            <titrerev>eLife 
+                test italique</titrerev>
+            <titrerevabr>EL</titrerevabr>
+            <idissnnum>2050-084X</idissnnum>
+            <directeur>
+                <nompers>
+                    <prenom>Detlef</prenom>
+                    <nomfamille>Weigel</nomfamille>
+                </nompers>
+            </directeur>
+            <redacteurchef typerc="invite">
+                <fonction lang="fr">testeur de script</fonction>
+                <nompers>
+                    <prenom>Fou</prenom>
+                    <nomfamille>Barre</nomfamille>
+                </nompers>
+            </redacteurchef>
+        </revue>
+        <numero id="lorem-ipsum">
+            <pub>
+                <annee>2012</annee>
+            </pub>
+            <pubnum>
+                <date>2012-10-15</date>
+            </pubnum>
+        </numero>
+        <editeur>
+            <nomorg/>
+        </editeur>
+        <prod>
+            <nomorg/>
+        </prod>
+        <prodnum>
+            <nomorg/>
+        </prodnum>
+        <diffnum>
+            <nomorg/>
+        </diffnum>
+        <histpapier>
+            <alinea>néant</alinea>
+        </histpapier>
+        <schema nom="Erudit Article" version="3.0.0" lang="fr"/>
+        <droitsauteur>This article is distributed under the terms of the Creative
+            Commons Attribution License, which permits unrestricted use
+            and redistribution provided that the original author and source are
+            credited.<nomorg xmlns="">Schuman et al</nomorg>, 2012</droitsauteur>
+    </admin>
+    <liminaire>
+        <grtitre/>
+        <grauteur/>
+    </liminaire>
+    <corps>
+        <section1/>
+    </corps>
+</article>
