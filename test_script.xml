@@ -102,34 +102,33 @@
          </auteur>
       </grauteur>
       <resume lang="fr">
-         <alinea>
-            <para>
-               <alinea>As the population of the world continues to increase beyond 7 billion, and
+         <para>
+            <alinea>As the population of the world continues to increase beyond 7 billion, and
                     agricultural pests continue to rapidly evolve resistance to pesticides, it is
                     becoming ever more important to cultivate arable land in a way that is
                     sustainable for both humans and the environment. A better understanding of the
                     different mechanisms used by wild plants to deter herbivores will help to
                     increase crop production without harming the environment.</alinea>
-            </para>
-            <para>
-               <alinea>Plants use both direct and indirect methods to fend off herbivores. Direct
+         </para>
+         <para>
+            <alinea>Plants use both direct and indirect methods to fend off herbivores. Direct
                     defense methods include the production of chemicals that are toxic to herbivores
                     or give them indigestion, and the growth of sticky prickles and spines that can
                     injure or kill the herbivore. Indirect defense methods, on the other hand,
                     generally rely on the plant attracting organisms that are either predators or
                     parasites of the herbivore.</alinea>
-            </para>
-            <para>
-               <alinea>Plants produce odors known as herbivory-induced plant volatiles (HIPVs) that are
+         </para>
+         <para>
+            <alinea>Plants produce odors known as herbivory-induced plant volatiles (HIPVs) that are
                     thought to offer indirect defense against herbivores by betraying their location
                     to predators and parasites. However, HIPVs also influence other members of the
                     ecological community, sometimes in ways that are detrimental to plants.
                     Moreover, despite 30 years of research, no study has demonstrated that HIPVs
                     increase the fitness of a plant, so it is unclear what they have evolved to
                     do.</alinea>
-            </para>
-            <para>
-               <alinea>Now, a 2-year field study by Schuman et al. has shown plants
+         </para>
+         <para>
+            <alinea>Now, a 2-year field study by Schuman et al. has shown plants
                     that emit green leaf volatiles (which are a type of HIPV) produce twice as many
                     buds and flowers&#x2014;a measure of fitness&#x2014;as plants that have been genetically
                     engineered not to emit green leaf volatiles. This study was conducted with
@@ -140,9 +139,9 @@
                         Manduca sexta&#x2014;reduced the number of herbivores by a factor
                     of two. This is the first evidence that HIPVs offer indirect defense against
                     herbivores.</alinea>
-            </para>
-            <para>
-               <alinea>Schuman et al. also studied the effects of molecules called
+         </para>
+         <para>
+            <alinea>Schuman et al. also studied the effects of molecules called
                     protease inhibitors that are thought to function as direct defenses by making it
                     difficult for herbivores to digest plants. They found that the ability to
                     produce protease inhibitors did not increase the fitness of plants under
@@ -153,14 +152,13 @@
                     combination of biological pesticides and genetic engineering to produce both
                     HIPVs and protease inhibitors&#x2014;is the best approach for defending agricultural
                     plants against pests.</alinea>
-            </para>
-            <para>
-               <alinea>
+         </para>
+         <para>
+            <alinea>
                     DOI:
                     http://dx.doi.org/10.7554/eLife.00007.002
                 </alinea>
-            </para>
-         </alinea>
+         </para>
       </resume>
       <grmotcle lang="fr">
          <motcle>Nicotiana attenuata</motcle>
