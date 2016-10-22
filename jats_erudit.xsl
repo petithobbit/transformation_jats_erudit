@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
+    xpath-default-namespace="">
     <xsl:output method="xml" indent="yes" encoding="iso-8859-1"/>
 
 
@@ -258,22 +259,75 @@
 
 
 
-    <!-- section1 -->
-    <xsl:template match="//body">
+    <!-- contenus mixtes -->
+
+    <!--corps: para et alinea-->
+    <xsl:template match="sec/p">
+        <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
+            <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
+                <xsl:apply-templates/>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
+    
+    
+
+    <!-- italique -->
+   <!-- <xsl:template match="italic">
+        <marquage type="italique">
+            <xsl:apply-templates/>
+        </marquage>
+    </xsl:template>-->
+    <xsl:template match="italic">
+        <xsl:element name="marquage" namespace="http://www.erudit.org/xsd/article" >
+            <xsl:attribute name="typemarq">italique</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+       
+    </xsl:template> 
+
+    <!-- renvois -->
+    <!--<xsl:template match="xref">
+        <renvoi
+            idref="{@rid}"
+            typeref="{@ref-type}"></renvoi>
+    </xsl:template>-->
+    <xsl:template match="xref">
+        <xsl:element name="renvoi" namespace="http://www.erudit.org/xsd/article">
+            <xsl:for-each select="@rid">
+                <xsl:attribute name="idref">
+                    <xsl:value-of select="."/>
+                </xsl:attribute> 
+            </xsl:for-each>
+            <xsl:for-each select="@ref-type">
+                <xsl:attribute name="typeref">
+                    <xsl:value-of select="'refbiblio'"/>
+                </xsl:attribute>
+            </xsl:for-each>
+            <xsl:apply-templates/>
+           </xsl:element>
+            </xsl:template>
+    
+   
+    <!-- 
+    <xsl:template match="xref/@ref-type">
+        
+    </xsl:template>
+    <xsl:template match="xref/@rid">
+        <xsl:attribute name="idref">
+            <xsl:value-of select="."/>
+        </xsl:attribute>
+    </xsl:template>
+     -->
+    <xsl:template match="body">
         <!-- regex pour nom de valeur d'attribut? -->
-        <xsl:for-each select="sec[@id='s1']">
+        <xsl:for-each select="sec">
             <xsl:if test="./title">
                 <xsl:element name="titre" namespace="http://www.erudit.org/xsd/article">
                     <xsl:value-of select="./title"/>
+                    <xsl:apply-templates/>
                 </xsl:element>
             </xsl:if>
-            <xsl:for-each select="./p">
-                <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
-                    <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
-                        <xsl:value-of select="current()"/>
-                    </xsl:element>
-                </xsl:element>
-            </xsl:for-each>
         </xsl:for-each>
     </xsl:template>
 
@@ -287,18 +341,35 @@
         </xsl:for-each>
     </xsl:template>
 
-    <!-- resume -->
+    <!-- resume: sélection d'un des deux types d'abstracts présentés dans les artéfacts -->
+    
     <!-- voir s'il faut mettre en place un "catch" pour empêcher l'affichage du dernier <p> qui, 
    dans les artéfacts fournis, montrent un doi et non du texte-->
     <xsl:template match="//article-meta/abstract[@abstract-type='executive-summary']">
-        <xsl:for-each select="//article-meta/abstract[@abstract-type='executive-summary']/p">
+       <xsl:apply-templates/> 
+    </xsl:template>
+    
+    <!-- resume: traitement particulier des deux premières balises de <abstract> -->
+    <xsl:template match="object-id"/>
+    <xsl:template match="abstract/title"/>
+    
+    <!-- resume: alinea, pas de para -->
+    <xsl:template match="abstract/p">
+        <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
+            <xsl:apply-templates/>
+        </xsl:element>      
+    </xsl:template>    
+    
+    
+    <!-- 
+    <xsl:for-each select="//article-meta/abstract[@abstract-type='executive-summary']/p">
             <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
                 <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
                     <xsl:value-of select="current()"/>
                 </xsl:element>
             </xsl:element>
         </xsl:for-each>
-    </xsl:template>
+    -->
 
     <!-- droitsauteur -->
     <xsl:template match="//permissions">
