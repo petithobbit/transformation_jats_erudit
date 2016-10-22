@@ -4,19 +4,12 @@
     <xsl:output method="xml" indent="yes" encoding="iso-8859-1"/>
 
 
-    <!-- IB 2016-10-20 : Section "corps" en cours, besoin de voir quelles valeurs d'attributs seront utilisées
-    pour structurer l'intrant.-->
-
-    <!-- IB 2016-10-20 : le script génère automatiquement des attributs "xmlns" dans l'extrant pour certains éléments
-    et je ne sais pas pourquoi. P.ex. : droitsauteur/nomorg 
-        IB ajout 2016-10-20: remplacé certains éléments littéraux par l'utilisation de <xsl:element/> et <xsl:attribute/>
-    et déclaré le namespace dans certains d'entres eux, en cours. pour l'instant, disparition d'ajout des attributs "xmlns" dans l'extrant-->
-
+    
     <!-- IB 2016-10-19 : Preuve de concept. Prototype script pour validation Version 1.0
             Stratégie utilisée pour le script: 
             Réécriture complète de l'article en suivant l'arborescence du Schéma Érudit.
             Éléments structurants (complexes sans PCDATA) directement écrits dans le XSLT.
-            Traitement du balisage orienté présentation fait par substitution.
+            Traitement du balisage orienté présentation fait par l'utilisation de templates.
             
             Rationale : Le script sera alors extensible. ET valide.
             Désavantage : beaucoup de boilerplate. À revoir à chaque nouvelle version du schéma Érudit.
@@ -35,15 +28,6 @@
                 
                 version ultérieure demandera plusieurs artéfact en provenance de Stylo
            -->
-
-    <!-- traitement balises de présentation -->
-
-    <!--<xsl:template match="italic">
-        <marquage typemarq="italique">
-            <xsl:value-of select="current()"/>
-        </marquage>
-    </xsl:template> -->
-
 
     <xsl:template match="/">
         <!-- idproprio : il faut valider avec Érudit pour avoir la signification exacte de l'identifiant 
@@ -259,66 +243,48 @@
 
 
 
-    <!-- contenus mixtes -->
+    <!-- ================ contenus mixtes ==================== -->
+    <!-- ***********************figures************************************ 
+    les objets d'information de type figure d"érudit sont un sous-groupe d'une balise
+    plus générique dans jats
+    image id : <xsl:value-of select="./graphic/@xlink:href" xpath-default-namespace="http://www.w3.org/1999/xlink"></xsl:value-of>-->
 
-    <!--corps: para et alinea-->
-    <xsl:template match="sec/p">
-        <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
-            <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
-                <xsl:apply-templates/>
+    <xsl:template match="fig/object-id">
+        <xsl:element name="figure" namespace="http://www.erudit.org/xsd/article">
+            <xsl:element name="objetmedia" namespace="http://www.erudit.org/xsd/article">
+                <xsl:attribute name="flot">bloc</xsl:attribute>
+                <xsl:element name="image">
+                    <xsl:attribute name="typeimage"/>
+                    <xsl:attribute name="desc"/>
+                    <xsl:attribute name="id">img1164-1.jpg</xsl:attribute>
+                </xsl:element>
             </xsl:element>
         </xsl:element>
     </xsl:template>
-    
-    
 
-    <!-- italique -->
-   <!-- <xsl:template match="italic">
-        <marquage type="italique">
-            <xsl:apply-templates/>
-        </marquage>
-    </xsl:template>-->
-    <xsl:template match="italic">
-        <xsl:element name="marquage" namespace="http://www.erudit.org/xsd/article" >
-            <xsl:attribute name="typemarq">italique</xsl:attribute>
+
+    <!-- *****************************resume**********************************
+        sélection d'un des deux types d'abstracts présentés dans les artéfacts -->
+
+    <!-- voir s'il faut mettre en place un "catch" pour empêcher l'affichage du dernier <p> qui, 
+   dans les artéfacts fournis, montrent un doi et non du texte-->
+    <xsl:template match="//article-meta/abstract[@abstract-type='executive-summary']">
+        <xsl:apply-templates/>
+    </xsl:template>
+
+    <!-- resume: traitement particulier des deux premières balises de <abstract> -->
+    <xsl:template match="object-id"/>
+    <xsl:template match="abstract/title"/>
+
+    <!-- resume: pas de para, juste alinea -->
+    <xsl:template match="abstract/p">
+        <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
             <xsl:apply-templates/>
         </xsl:element>
-       
-    </xsl:template> 
+    </xsl:template>
 
-    <!-- renvois -->
-    <!--<xsl:template match="xref">
-        <renvoi
-            idref="{@rid}"
-            typeref="{@ref-type}"></renvoi>
-    </xsl:template>-->
-    <xsl:template match="xref">
-        <xsl:element name="renvoi" namespace="http://www.erudit.org/xsd/article">
-            <xsl:for-each select="@rid">
-                <xsl:attribute name="idref">
-                    <xsl:value-of select="."/>
-                </xsl:attribute> 
-            </xsl:for-each>
-            <xsl:for-each select="@ref-type">
-                <xsl:attribute name="typeref">
-                    <xsl:value-of select="'refbiblio'"/>
-                </xsl:attribute>
-            </xsl:for-each>
-            <xsl:apply-templates/>
-           </xsl:element>
-            </xsl:template>
-    
-   
-    <!-- 
-    <xsl:template match="xref/@ref-type">
-        
-    </xsl:template>
-    <xsl:template match="xref/@rid">
-        <xsl:attribute name="idref">
-            <xsl:value-of select="."/>
-        </xsl:attribute>
-    </xsl:template>
-     -->
+    <!--****************************corps****************************************-->
+
     <xsl:template match="body">
         <!-- regex pour nom de valeur d'attribut? -->
         <xsl:for-each select="sec">
@@ -332,6 +298,48 @@
     </xsl:template>
 
 
+    <!-- para et alinea-->
+    <xsl:template match="sec/p">
+        <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
+            <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
+                <xsl:apply-templates/>
+            </xsl:element>
+        </xsl:element>
+    </xsl:template>
+
+
+    <!-- italique -->
+    <xsl:template match="italic">
+        <xsl:element name="marquage" namespace="http://www.erudit.org/xsd/article">
+            <xsl:attribute name="typemarq">italique</xsl:attribute>
+            <xsl:apply-templates/>
+        </xsl:element>
+    </xsl:template>
+
+    <!-- renvois -->
+    <!-- problème à résoudre : un seul attribut avec plusieurs valeurs dans le texte cible
+    pour idref avec ce code-->
+    <xsl:template match="xref">
+        <xsl:element name="renvoi" namespace="http://www.erudit.org/xsd/article">
+            <xsl:if test="@rid">
+                <xsl:attribute name="idref">
+                    <xsl:value-of select="."/>
+                </xsl:attribute>  
+                
+            </xsl:if>
+            <xsl:if test="@ref-type">
+                <xsl:if test="@ref-type['author-note']">
+                    <xsl:attribute name="typeref">note</xsl:attribute> 
+                </xsl:if>
+                <xsl:if test="@ref-type['bibr']">
+                    <xsl:attribute name="typeref">refbiblio</xsl:attribute> 
+                </xsl:if>
+            </xsl:if>
+            
+        </xsl:element>
+    </xsl:template>
+ 
+
     <!-- el grmotcle -->
     <xsl:template match="//article-meta/kwd-group[@kwd-group-type='author-keywords']">
         <xsl:for-each select="//article-meta/kwd-group[@kwd-group-type='author-keywords']/kwd">
@@ -341,35 +349,8 @@
         </xsl:for-each>
     </xsl:template>
 
-    <!-- resume: sélection d'un des deux types d'abstracts présentés dans les artéfacts -->
-    
-    <!-- voir s'il faut mettre en place un "catch" pour empêcher l'affichage du dernier <p> qui, 
-   dans les artéfacts fournis, montrent un doi et non du texte-->
-    <xsl:template match="//article-meta/abstract[@abstract-type='executive-summary']">
-       <xsl:apply-templates/> 
-    </xsl:template>
-    
-    <!-- resume: traitement particulier des deux premières balises de <abstract> -->
-    <xsl:template match="object-id"/>
-    <xsl:template match="abstract/title"/>
-    
-    <!-- resume: alinea, pas de para -->
-    <xsl:template match="abstract/p">
-        <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
-            <xsl:apply-templates/>
-        </xsl:element>      
-    </xsl:template>    
-    
-    
-    <!-- 
-    <xsl:for-each select="//article-meta/abstract[@abstract-type='executive-summary']/p">
-            <xsl:element name="para" namespace="http://www.erudit.org/xsd/article">
-                <xsl:element name="alinea" namespace="http://www.erudit.org/xsd/article">
-                    <xsl:value-of select="current()"/>
-                </xsl:element>
-            </xsl:element>
-        </xsl:for-each>
-    -->
+
+
 
     <!-- droitsauteur -->
     <xsl:template match="//permissions">
