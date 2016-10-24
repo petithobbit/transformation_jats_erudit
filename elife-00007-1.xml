@@ -3,6 +3,7 @@
 <?xml-model href="JATS-Authoring-1-1-MathML3-DTD-RNG/JATS-articleauthoring1-mathml3.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <article article-type="research-article" dtd-version="1.1"
     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- cf. documentation https://jats.nlm.nih.gov/articleauthoring/tag-library/1.1/index.html -->
     <front>
         <journal-meta>
             
