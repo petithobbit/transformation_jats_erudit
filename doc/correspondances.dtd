@@ -16,19 +16,25 @@
 <!ATTLIST banque modelisation CDATA #REQUIRED>
 <!ATTLIST banque collaboration CDATA #IMPLIED >
 
-<!ELEMENT correspondance (el_jats, el_erudit, type_correspondance, (commentaires, boilerplate?))? >
-<!ATTLIST correspondance auteur CDATA "IB" >
+<!ELEMENT correspondance ((el_erudit),(el_jats), type_correspondance, (commentaires, boilerplate?)?) >
+<!ATTLIST correspondance reference_jats CDATA #IMPLIED >
+<!ATTLIST correspondance reference_erudit CDATA #IMPLIED >
 
-<!ELEMENT el_jats (#PCDATA)>
-<!ATTLIST el_jats reference NMTOKEN #IMPLIED >
 <!ELEMENT el_erudit (#PCDATA) >
+<!ATTLIST el_erudit valeur CDATA #IMPLIED >
+<!ELEMENT el_jats (#PCDATA)>
+
+
+
 <!-- le type de correspondance est entrevu du point de vue de l'élément Érudit. Par ex., "specifique" veut dire que l'élément Érudit est inclus 
 dans l'élément JATS, qui a une portée plus grande, et "generique" veut dire que l'élément Érudit est plus vaste que celui de JATS-->
+
 <!ELEMENT type_correspondance (parfaite | specifique | generique | absente) >
 
     <!ELEMENT parfaite EMPTY>
-    <!ELEMENT incluse EMPTY >
-    <!ELEMENT partielle EMPTY >
+    <!ELEMENT specifique EMPTY >
+    <!ELEMENT generique EMPTY >
+    <!ELEMENT absente EMPTY >
 
 <!ELEMENT commentaires (#PCDATA) >
 <!ELEMENT boilerplate (#PCDATA)>
