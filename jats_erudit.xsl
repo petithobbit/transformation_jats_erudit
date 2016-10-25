@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0"
-    xpath-default-namespace="http://jats.nlm.nih.gov"
     xmlns="http://www.erudit.org/xsd/article">
     <xsl:output method="xml" indent="yes" encoding="iso-8859-1"/>
 
@@ -36,13 +35,12 @@
 
         <article xmlns:xlink="http://www.w3.org/1999/xlink"
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           
             xsi:schemaLocation="http://www.erudit.org/xsd/article http://www.erudit.org/xsd/article/3.0.0/eruditarticle.xsd"
             qualtraitement="complet" idproprio="{//article-id[@pub-id-type='publisher-id']}"
             typeart="autre" lang="fr" ordseq="1">
 
             <!-- ========================= el structurant admin (OBL) ==================================-->
-<!--
+            <!--
             <admin>
                 <infoarticle>
                     <idpublic scheme="">
@@ -50,7 +48,7 @@
                     </idpublic>
                 </infoarticle>
             </admin> -->
-            
+
             <xsl:element name="admin" namespace="http://www.erudit.org/xsd/article">
                 <xsl:element name="infoarticle" namespace="http://www.erudit.org/xsd/article">
                     <!--IB 2016-10-19 : attribut "scheme" #required, donc considéré comme boilerplate -->
@@ -239,7 +237,7 @@
             <!-- ========================= el structurant corps (OBL) EN COURS==================================
             
             2016-10-24 : changé section1 pour section. -->
-           
+
             <xsl:element name="corps" namespace="http://www.erudit.org/xsd/article">
                 <xsl:apply-templates select="//body"/>
             </xsl:element>
@@ -287,7 +285,7 @@
     <xsl:template match="abstract/title"/>
 
     <!-- resume: pas de para, juste alinea -->
-    <xsl:template match="abstract/p">
+    <xsl:template match="abstract/p | list-item/p">
         <xsl:element name="alinea">
             <xsl:apply-templates/>
         </xsl:element>
@@ -295,14 +293,14 @@
 
     <!--****************************corps****************************************-->
 
-    
+
     <!-- vérifier si il y a des attributs dans la balise title -->
     <xsl:template match="title">
-       <titre>
-           <xsl:apply-templates/>
-       </titre>
+        <titre>
+            <xsl:apply-templates/>
+        </titre>
     </xsl:template>
-    
+
     <xsl:template match="sec">
         <section>
             <xsl:apply-templates/>
@@ -314,32 +312,42 @@
         <para>
             <!-- voir si jats a l'équivalent de l'alinea -->
             <alinea>
-                <xsl:apply-templates/>       
+                <xsl:apply-templates/>
             </alinea>
         </para>
     </xsl:template>
-    
+
     <!--liste-->
+    <!-- @todo traiter les listes dans body front abstract etc. voir doc -->
     <xsl:template match="list">
         <xsl:choose>
+            <xsl:when test="parent::sec">
+                <para>
+                    <xsl:call-template name="listes"/>
+                </para>
+            </xsl:when>
+            <xsl:otherwise>
+                <xsl:call-template name="listes"/>
+            </xsl:otherwise>
+        </xsl:choose>
+    </xsl:template>
+    
+    <!-- exemple de regle nommee -->
+    <xsl:template name="listes">
+        <xsl:param name="content"/>
+        <xsl:choose>
             <xsl:when test="@list-type='order'">
-                <listeord>
+                <listeord numeration="decimal">
                     <xsl:apply-templates/>
                 </listeord>
             </xsl:when>
-            <xsl:when test="@list-type='bullet'">
+            <xsl:otherwise>
+                <!-- default pour @list-type="bullet" -->
                 <listenonord signe="disque">
                     <xsl:apply-templates/>
                 </listenonord>
-            </xsl:when>
-            <xsl:otherwise>
-                <xsl:text>toto</xsl:text>
             </xsl:otherwise>
         </xsl:choose>
-        
-        <listeord>
-            
-        </listeord>
     </xsl:template>
 
     <!-- italique -->
@@ -360,21 +368,21 @@
             <xsl:if test="@rid">
                 <xsl:attribute name="idref">
                     <xsl:value-of select="."/>
-                </xsl:attribute>  
-                
+                </xsl:attribute>
+
             </xsl:if>
             <xsl:if test="@ref-type">
                 <xsl:if test="@ref-type['author-note']">
-                    <xsl:attribute name="typeref">note</xsl:attribute> 
+                    <xsl:attribute name="typeref">note</xsl:attribute>
                 </xsl:if>
                 <xsl:if test="@ref-type['bibr']">
-                    <xsl:attribute name="typeref">refbiblio</xsl:attribute> 
+                    <xsl:attribute name="typeref">refbiblio</xsl:attribute>
                 </xsl:if>
             </xsl:if>
-            
+
         </xsl:element>
     </xsl:template>
- 
+
 
     <!-- el grmotcle -->
     <xsl:template match="//article-meta/kwd-group[@kwd-group-type='author-keywords']">
