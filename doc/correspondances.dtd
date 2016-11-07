@@ -1,40 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--DTD correspondances JATS-Érudit
    Version 1.0                                                             
-   Créée le 2016-10-17
-   Révisée
+   Créée le 2016-11-08
+   Révisée le
 
-        Auteur : Isabelle Bastien, étudiante M.S.I EBSI
+        Auteur : Isabelle Bastien, finissante M.S.I. EBSI
         Courriel : isabelle.bastien@umontreal.ca -->
 
-<!ELEMENT banque (correspondance+)>
-<!ATTLIST banque version_jats CDATA #FIXED "dtd 1.1" >
-<!ATTLIST banque version_jats_reference CDATA #FIXED "https://jats.nlm.nih.gov/archiving/tag-library/1.1/index.html" >
-<!ATTLIST banque version_erudit CDATA #FIXED "schema 3.0.0" >
-<!ATTLIST banque version_erudit_reference CDATA #FIXED "http://www.erudit.org/xsd/article/3.0.0/doc/" >
-<!ATTLIST banque date_version CDATA #REQUIRED >
-<!ATTLIST banque modelisation CDATA #REQUIRED>
-<!ATTLIST banque collaboration CDATA #IMPLIED >
+<!ELEMENT correspondances (correspondance+)>
+    <!ATTLIST correspondances standard_source CDATA #FIXED "Jats 1.1" >
+    <!ATTLIST correspondances source_reference CDATA #FIXED "https://jats.nlm.nih.gov/archiving/tag-library/1.1/index.html" >
+    <!ATTLIST correspondances standard_cible CDATA #FIXED "Erudit article 3.0.0">
+    <!ATTLIST correspondances cible_reference CDATA #FIXED "http://www.erudit.org/xsd/article/3.0.0/doc/" >
+    <!ATTLIST correspondances version CDATA #FIXED "1.0" >
+    <!ATTLIST correspondances date_modification CDATA #REQUIRED >
+    <!ATTLIST correspondances auteur CDATA #REQUIRED>
+    <!ATTLIST correspondances collaboration CDATA #IMPLIED >
 
-<!ELEMENT correspondance ((el_erudit),(el_jats), type_correspondance, (commentaires, boilerplate?)?) >
-<!ATTLIST correspondance reference_jats CDATA #IMPLIED >
-<!ATTLIST correspondance reference_erudit CDATA #IMPLIED >
+<!ELEMENT correspondance (source, cible, equivalence, commentaires) >
 
-<!ELEMENT el_erudit (#PCDATA) >
-<!ATTLIST el_erudit valeur CDATA #IMPLIED >
-<!ELEMENT el_jats (#PCDATA)>
+<!ELEMENT source (element, definition)>
+<!ELEMENT element (#PCDATA) >
+<!ATTLIST element reference CDATA #IMPLIED >
+<!ELEMENT definition (#PCDATA) >
 
+<!ELEMENT cible (element, definition)>
 
+<!ELEMENT equivalence (similaire | cible_generique | cible_specifique | tag_abuse | sans_objet) >
+<!ELEMENT similaire EMPTY >
+<!ATTLIST similaire definition CDATA #FIXED "La signification de la balise cible est minimalement similaire à celle de la balise source" >
+<!ELEMENT cible_generique EMPTY >
+<!ATTLIST cible_generique definition CDATA #FIXED "La signification de la balise cible est un générique de la balise source">
+<!ELEMENT cible_specifique EMPTY >
+<!ATTLIST cible_specifique definition CDATA #FIXED "La signification de la balise cible est un spécifique de la balise source">
+<!ELEMENT tag_abuse EMPTY >
+<!ATTLIST tag_abuse definition CDATA #FIXED "La signification de la balise cible ne se retrouve dans celle de la balise source">
+<!ELEMENT sans_objet EMPTY >
 
-<!-- le type de correspondance est entrevu du point de vue de l'élément Érudit. Par ex., "specifique" veut dire que l'élément Érudit est inclus 
-dans l'élément JATS, qui a une portée plus grande, et "generique" veut dire que l'élément Érudit est plus vaste que celui de JATS-->
-
-<!ELEMENT type_correspondance (parfaite | specifique | generique | absente) >
-
-    <!ELEMENT parfaite EMPTY>
-    <!ELEMENT specifique EMPTY >
-    <!ELEMENT generique EMPTY >
-    <!ELEMENT absente EMPTY >
-
-<!ELEMENT commentaires (#PCDATA) >
-<!ELEMENT boilerplate (#PCDATA)>
+<!ELEMENT commentaires (#PCDATA)* >
