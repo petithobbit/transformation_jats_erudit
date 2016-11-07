@@ -1,0 +1,898 @@
+<html lang="fr">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta charset="utf-8">
+      <meta name="author" content="Isabelle Bastien">
+      <link rel="stylesheet" type="text/css" href="correspondances.css">
+      <title>documentation transformation</title>
+   </head>
+   <body id="page">
+      <header>
+         <h1>Banque de correspondances</h1>
+         <h3> Valide pour la version 1.0. Modifiée le 2016-11-07 par Isabelle Bastien</h3>
+         <p>Correspondances utilisées dans le cadre de la transformation du standard <a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/index.html" target="_blank">Jats 1.1</a> vers le standard <a href="http://www.erudit.org/xsd/article/3.0.0/doc/" target="_blank">Erudit article 3.0.0.</a></p>
+      </header>
+      <main>
+         <table>
+            <caption>Tableau des correspondances</caption>
+            <thead>
+               <tr>
+                  <th>Jats 1.1</th>
+                  <th>Erudit article 3.0.0</th>
+                  <th>Équivalence</th>
+                  <th>Commentaires</th>
+               </tr>
+            </thead>
+            <tbody>
+               
+               <tr>
+                  <td title="Describe not only typical journal articles (research articles) but also much of the non-article content within a journal."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/article.html" target="_blank">article</a></td>
+                  <td title="Écrit formant par lui-même un tout distinct, mais faisant partie d’un numéro d’une publication en série."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#article" target="_blank">article</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Type of publication identifier or the organization or system that defined the identifier. On the 'article-id' element, which holds an identifier for the entire article."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/pub-id-type.html" target="_blank">article-id/@pub-id-type="publisher-id"</a></td>
+                  <td title="Nom caractérisant de façon unique un article. La nomenclature de cet identifiant est déterminée de façon propriétaire par chaque producteur de contenu."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#article_idproprio" target="_blank">article/@idproprio</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td> Artéfacts montrent valeur variable #######xx (1028815ar)</td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xml-lang.html" target="_blank">article-title/@xml:lang</a></td>
+                  <td title="Indique la langue."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#listelang_lang" target="_blank">article/@lang</a></td>
+                  <td title="La signification de la balise cible ne se retrouve dans celle de la balise source">tag_abuse</td>
+                  <td>Artéfacts montrent valeur "fr"</td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Indique la qualité du traitement qui a été appliquée à l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#article_qualtraitement" target="_blank">article/@qualtraitement</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Artéfacts montrent valeur "complet". Aucune équivalence trouvée.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Type or kind of article."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/article-type.html" target="_blank">article/@articletype</a></td>
+                  <td title="Nature ou genre de l’article, qui est déterminée par un ensemble de composants, de propriétés qui définissent son appartenance à une catégorie déterminée."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#article_typeart" target="_blank">article/@typeart</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent valeur "autre"</td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Ordre séquentiel de l’article, à l’intérieur du sommaire du numéro."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#article_ordseq" target="_blank">article/@ordseq</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Aucune équivalence trouvée.</td>
+               </tr>
+               
+               <tr>
+                  <td title="the metadata or header information, which contains both journal metadata [journal-meta] and article metadata [article-meta]."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/front.html" target="_blank">front</a></td>
+                  <td title="Données administratives qui permettent la gestion adéquate de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#admin" target="_blank">admin</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for information concerning the article that identifies or describes the article."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/article-meta.html" target="_blank">article-meta</a></td>
+                  <td title="Indications, renseignements, précisions que l'on donne sur l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#infoarticle" target="_blank">infoarticle</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Unique external identifier assigned to an article."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/article-id.html" target="_blank">article-id</a></td>
+                  <td title="Tout nom, caractère ou indicatif caractérisant une donnée et permettant de l'identifier &#xA;                ou de la reconnaître comme telle dans toute technique de recherche. Les règles régissant cet &#xA;                identifiant sont généralement connues et/ou accessibles à tous, ce qui permet de le qualifier &#xA;                de public."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#idpublic" target="_blank">idpublic</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent "null"</td>
+               </tr>
+               
+               <tr>
+                  <td title="Type of publication identifier or the organization or system that defined the identifier."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/pub-id-type.html" target="_blank">article-id/@pub-id-type</a></td>
+                  <td title="Nom de l'ensemble de règles qui spécifient la représentation, sous forme de caractères, des données"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#scheme_scheme" target="_blank">idpublic/@scheme</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent valeur "doi".</td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for the subject matter designations describing a document’s content or a component document’s content."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/subj-group.html" target="_blank">subj-group</a></td>
+                  <td title="Regroupement de l’ensemble des descripteurs d’une même langue, pour un article ou une revue."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grdescripteur" target="_blank">grdescripteur</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Subject, information class, or type of a particular 'subj-group' element."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/subj-group-type.html" target="_blank">subj-group/@subj-group-type</a></td>
+                  <td title="Nom de l'ensemble de règles qui spécifient la représentation, sous forme de caractères, des données."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#scheme_scheme" target="_blank">grdescripteur/@scheme</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent valeur "http://rameau.bnf.fr"</td>
+               </tr>
+               
+               <tr>
+                  <td title="Name of one subject or topic used to describe an article. Such topics and groupings of topics are typically used to provide headings for groups of documents or document components in a printed, or online, generated Table of Contents."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/subject.html" target="_blank">subject</a></td>
+                  <td title="Mot ou groupe de mots sélectionné(s) dans le titre ou dans le texte d'un document, qui caractérise le contenu d'un ouvrage et qui permet d'effectuer des recherches documentaires."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#descripteur" target="_blank">descripteur</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Potentiel thésaurus</td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for counts of a document (for example, number of tables, number of figures, number of words)."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/counts.html" target="_blank">counts</a></td>
+                  <td title=""></td>
+                  <td title="">sans_objet</td>
+                  <td>Modèle de contenu : (count*, fig-count?, table-count?, equation-count?, ref-count?,
+                     page-count?, word-count?). Many elements in the base Suite were created explicitly
+                     for import conversion, that is, so that the intellectual work of tagging done by publishers
+                     would not be discarded when they converted material from another tag set to this Tag
+                     Set. The count elements are a perfect example of this rationale; they are conversion
+                     elements and should only be tagged if present in the original source.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Generic count element to count anything a NISO JATS user organization may wish to count in a document. The @count-type attribute will name what is being counted (such as footnotes, tables, sections, contributors, images, etc.) The @count attribute will state how many of the objects are in the document. "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/count.html" target="_blank">count</a></td>
+                  <td title=""></td>
+                  <td title="">sans_objet</td>
+                  <td>À utiliser, au besoin, dans l'extrant jats de Stylo, pour colliger les occurences
+                     d'objets non considérés explicitement dans jats, mais qui sont nécessaires dans erudit,
+                     comme pour vidéo et audio.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="">count[@count-type="paragraphe"]/@count</td>
+                  <td title="Quantité de paragraphes que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbpara" target="_blank">nbpara</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "paragraphe" inventée ici. Non traité dans version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="The approximate number of words that appear in a document or document component. Number of specific objects that appear in the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/word-count.html" target="_blank">word-count/@count</a></td>
+                  <td title="Quantité de mots que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbmot" target="_blank">nbmot</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0. Possiblement généré par XSL sur texte transformé.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Number of 'fig' elements that appear in the document. Number of specific objects that appear in the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/fig-count.html" target="_blank">fig-count/@count</a></td>
+                  <td title="Quantité de figures que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbfig" target="_blank">nbfig</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0. Désambiguisation nécéssaire pour JATS fig?</td>
+               </tr>
+               
+               <tr>
+                  <td title="Number of 'table-wrap' elements that appear in the document. Number of specific objects that appear in the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/table-count.html" target="_blank">table-count/@count</a></td>
+                  <td title="Quantité de tableaux que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbtabl" target="_blank">nbtabl</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0. Possiblement généré par XSL sur texte transformé.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Number of 'disp-formula' elements that appear in the document. Number of specific objects that appear in the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/equation-count.html" target="_blank">equation-count/@count</a></td>
+                  <td title="Quantité d’équations que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbeq" target="_blank">nbeq</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0. Possiblement généré par XSL sur texte transformé.</td>
+               </tr>
+               
+               <tr>
+                  <td title="">count[@count-type="audio"]/@count</td>
+                  <td title="Quantité d’objets audio que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbaudio" target="_blank">nbaudio</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "audio" inventée ici. Non traité dans version 1.0. Possiblement généré par
+                     XSL sur texte transformé.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="">count[@count-type="video"]/@count</td>
+                  <td title="Quantité d'objets vidéo que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbvideo" target="_blank">nbvideo</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "video" inventée ici. Non traité dans version 1.0. Possiblement généré par
+                     XSL sur texte transformé.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Number of references or citations that appear in a bibliographic reference list. Number of specific objects that appear in the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/ref-count.html" target="_blank">ref-count/@count</a></td>
+                  <td title="Quantité de références bibliographiques que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbrefbiblio" target="_blank">nbrefbiblio</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0. </td>
+               </tr>
+               
+               <tr>
+                  <td title="">count[@count-type="note"]/@count</td>
+                  <td title="Quantité de notes que l’on retrouve dans l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nbnote" target="_blank">nbnote</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "note" inventée ici. Non traité dans version 1.0. Possiblement généré par XSL
+                     sur texte transformé.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for metadata about the journal in which the article was published."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/journal-meta.html" target="_blank">journal-meta</a></td>
+                  <td title="Information concernant la revue."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#revue" target="_blank">revue</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Short code or abbreviation used as an identifier for a journal."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/journal-id.html" target="_blank">journal-id</a></td>
+                  <td title="Tout nom, caractère ou indicatif caractérisant une donnée et permettant de l'identifier ou de la reconnaître comme telle dans toute technique de recherche."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#revue" target="_blank">revue/@id</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="The language of the intellectual content of the element for which this is an attribute."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xml-lang.html" target="_blank">journal-id/@xml:lang</a></td>
+                  <td title=""><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#listelang_lang" target="_blank">revue/@lang</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent valeur "fr". Inheritance: The language value inherits down the
+                     tree, so an @xml:lang attribute names the language of the element and all its descendants,
+                     unless the descendant sets its own @xml:lang attribute. The default value of English
+                     (“en”) is set at the top-level element, and can be overridden there or anywhere lower
+                     in the document.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for the titles of the journal in which the article was published."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/journal-title-group.html" target="_blank">journal-title-group</a></td>
+                  <td title="Regroupement de l’information sur le titre de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grtitre" target="_blank">grtitre</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Full title of the journal in which the article was published."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/journal-title.html" target="_blank">journal-title</a></td>
+                  <td title="Nom, ou première partie du nom, que porte la revue dans laquelle est publié l’article décrit."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#titrerev" target="_blank">titrerev</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Modèle de contenu de 'titrerev' est mixte, mais artéfacts utilisent seulement du PCDATA.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Full subtitle of the journal in which the article was published."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/journal-subtitle.html" target="_blank">journal-subtitle</a></td>
+                  <td title="Nom abrégé que porte la revue"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#titrerevabr" target="_blank">titrerevabr</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Seulement présent dans les artéfacts jats.</td>
+               </tr>
+               
+               <tr>
+                  <td title="International Standard Serial Number, the international code that uniquely identifies a serial publication title"><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/issn.html" target="_blank">issn</a></td>
+                  <td title="Numéro qui identifie, sur le plan international, chaque titre clé de publications en série, dans le format numérique. Pour International Standard Serial Number ."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#idisbnnum" target="_blank">idissnnum</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for one or more contributors and information about those contributors."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/contrib-group.html" target="_blank">contrib-group</a></td>
+                  <td title=""></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for information about a single author, editor, or other contributor."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/contrib.html" target="_blank">contrib</a></td>
+                  <td title=""></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="">contrib/@contrib-type="directeur"</td>
+                  <td title="Celui qui est à la tête d'une revue dans son ensemble, rédaction et administration."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#directeur" target="_blank">directeur</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "directeur" inventée ici. Autre valeur utilisée dans le script XSL de la version
+                     1.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Ensemble des caractéristiques anatomiques et des éléments fonctionnels distinguant l'homme et la femme."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#personneltype_sexe" target="_blank">directeur/@sexe</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Absent dans jats et non traité dans la version 1.0. Cet attribut est optionnel sous
+                     érudit 3.0.0. Possibilité d'utiliser '@content-type' de balise 'name' ou enfants?
+                     À voir.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="">contrib/@contrib-type="redacteurchef"</td>
+                  <td title="Personne qui a la responsabilité des services de rédaction d'un journal ou d'un périodique."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#redacteurchef" target="_blank">redacteurchef</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "redacteurchef" inventée ici. Autre valeur utilisée dans le script XSL de la
+                     version 1.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Nature ou genre du rédacteur en chef."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#redacteurchef_typerc" target="_blank">redacteurchef/@typerc</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Artéfacts montrent valeur "invite". Considéré comme boilerplate dans script XSL version
+                     1.0, car obligatoire dans schéma 3.0.0..
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Ensemble des caractéristiques anatomiques et des éléments fonctionnels distinguant l'homme et la femme."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#personneltype_sexe" target="_blank">redacteurchef/@sexe</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Absent dans jats et non traité dans la version 1.0. Cet attribut est optionnel sous
+                     érudit 3.0.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Unique internal identifier of an element; allows element to be cross-referenced (made into a link)."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/id.html" target="_blank">contrib/@id</a></td>
+                  <td title="Toutes références à un nom, caractère ou indicatif caractérisant une donnée et permettant de l'identifier ou de la reconnaître comme telle dans toute technique de recherche."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#idrefs_idrefs" target="_blank">redacteurchef/@idrefs</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="">contrib/@contrib-type="editeur"</td>
+                  <td title="Personne morale qui assure la publication d'ouvrages."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#editeur" target="_blank">editeur</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "editeur" inventée ici. Autre valeur utilisée dans le script XSL de la version
+                     1.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="">contrib/@contrib-type="prod"</td>
+                  <td title="Personne morale qui produit des ouvrages."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#prod" target="_blank">prod</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Valeur "prod" inventée ici. Non traitée dans la version 1.0</td>
+               </tr>
+               
+               <tr>
+                  <td title="Valeur &#34;diffnum&#34; inventée ici. Non traitée dans la version 1.0">contrib/@contrib-type="diffnum"</td>
+                  <td title="Personne morale chargée de la diffusion des publications numériques."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#diffnum" target="_blank">diffnum</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Types of Contributors: The element 'contrib' can be used for many roles besides authors,
+                     for example, editors, special issue editors, photographers, illustrators, directors,
+                     etc. The @contrib-type attribute placed on the 'contrib' element, or the 'role' element
+                     used within the 'contrib' element, may be used to describe the contribution.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for the component elements of personal names"><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/name.html" target="_blank">name</a></td>
+                  <td title="Nom que porte une personne, composé généralement d’un prénom et d'un nom de famille."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nompers" target="_blank">nompers</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="All given names of a person, such as the first name, middle names, maiden name if used as part of the married name, etc."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/given-names.html" target="_blank">given-names</a></td>
+                  <td title="Nom particulier par lequel on distingue généralement les membres d’une même famille."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#prenom" target="_blank">prenom</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Group of contributors credited under a single name; includes an organization credited as a contributor."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/collab.html" target="_blank">collab</a></td>
+                  <td title="Nom que porte une organisation."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#nomorg" target="_blank">nomorg</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td>vérifier les nuances entre 'collab' et 'contrib-group'. Ici, il est possible de devoir
+                     inverser l'ordre logique des balises. Non traité dans version 1.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Title or role of a contributor to a work ."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/role.html" target="_blank">role</a></td>
+                  <td title="Emploi défini par l'ensemble des tâches, des obligations et des responsabilités qui globalement constituent le travail d'une personne."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#fonction" target="_blank">fonction</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Vide sur les artéfacts erudit</td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Ensemble des exemplaires d'un journal ou d'un périodique qui paraissent en une seule fois et qui portent le même numéro d'ordre."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#numero" target="_blank">numero</a></td>
+                  <td title="">sans_objet</td>
+                  <td>In this Tag Set, the metadata for the issue and the article has been placed together
+                     inside the 'article-meta'. In the article metadata, the 'issue' is the issue number
+                     of the issue in which the article appears.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Name or identifier of an entire journal issue (for example, a DOI). Non présent sur les artéfacts jats."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/issue-id.html" target="_blank">issue-id</a></td>
+                  <td title="Tout nom, caractère ou indicatif caractérisant une donnée et permettant de l'identifier ou de la reconnaître comme telle dans toute technique de recherche. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#id_id" target="_blank">numero/@id</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Possibilité d'utiliser @content-type dans le jats pour définir type de contenu. Non
+                     présent sur les artéfacts jats.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for the parts of a single date associated with an article’s publication (for example, date preprint was released, date article was published in print)."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/pub-date.html" target="_blank">pub-date</a></td>
+                  <td title="Information liée à l'action de publication de l'article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#pub" target="_blank">pub</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>Il y a une part d'interprétation ici, car le standard source est plus spécifique que
+                     le standard cible. Les artéfacts montrent que cette balise ne reçoit que de l'information
+                     concernant la date de publication. 
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Representation, usually numerical, of a calendar year."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/year.html" target="_blank">year</a></td>
+                  <td title="Année de publication de la parution d’une revue."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#annee" target="_blank">annee</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for the parts of a single date associated with an article’s publication. Format or medium of the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/format.html" target="_blank">pub-date/@format="electronic"</a></td>
+                  <td title="Information liée à l'action de publication numérique de l'article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#pubnum" target="_blank">pubnum</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>La valeur de l'attribut de jats est ouverte, pas de liste.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Representation, usually numerical, of a calendar year. Names one of the months of the year. Numeric, two-digit value of the day of the month."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/pub-date.html" target="_blank">pub-date/year pub-date/month pub-date/day</a></td>
+                  <td title="Une date associée à un événement particulier dans le cycle de vie de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#date" target="_blank">date</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td>L'info de la balise erudit est contenue dans trois balises jats différentes.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Event in the lifecycle of an article that this date is marking."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/date-type.html" target="_blank">pub-date/@date-type</a></td>
+                  <td title="Nature ou genre de la date, qui est déterminé par un ensemble de composants, de propriétés qui définissent son appartenance à une catégorie déterminée."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#date_typedate" target="_blank">date/@typedate</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Les artéfacts erudit montrent valeur "publication"</td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for elements that may be used to group articles into related clusters, for example, by subject matter or by series."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/article-categories.html" target="_blank">article-categories</a></td>
+                  <td title="Regroupement de l’information sur le thème de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grtheme" target="_blank">grtheme</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Il faut trouver quel élément correspond au thèmes du no dans extrant Stylo. 'article-meta'
+                     vs 'kwd'?
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Unique internal identifier of an element; allows element to be cross-referenced."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/id.html" target="_blank">article-categories/@id</a></td>
+                  <td title="Tout nom, caractère ou indicatif caractérisant une donnée et permettant de l'identifier ou de la reconnaître comme telle dans toute technique de recherche. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#id_id" target="_blank">grtheme/@id</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans la version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for the subject matter designations describing a document’s content or a component document’s content. "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/subj-group.html" target="_blank">subj-group</a></td>
+                  <td title=""></td>
+                  <td title="">sans_objet</td>
+                  <td>Contenent intermédiaire pour hiérarchisation plus fine des descripteurs.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Name of one subject or topic used to describe an article. "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/subject.html" target="_blank">subject</a></td>
+                  <td title="Désigne le sujet principal dont fait l'objet le numéro d’une revue."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#theme" target="_blank">theme</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for dates related to the processing history of the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/history.html" target="_blank">history</a></td>
+                  <td title="Historique de gestion du manuscrit papier."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#histpapier" target="_blank">hispapier</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent valeur "néant". Non traité dans version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Il s’agit de l’établissement d'un modèle de structure logique d'un document, à partir de la définition d'un ensemble de métadonnées qui permettent de fixer les éléments qui entreront dans la composition du document."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#schema" target="_blank">schema</a></td>
+                  <td title="">sans_objet</td>
+                  <td>[schema nom="Erudit Article" version="3.0.0" lang="fr"] considéré comme boilerplate
+                     dans version 1.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Indique la langue."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#schema_lang" target="_blank">schema/@lang</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Nom que porte le schéma."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#schema_nom" target="_blank">schema/@nom</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Version du schéma."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#schema_version" target="_blank">schema/@version</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for copyright and license information."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/permissions.html" target="_blank">permissions</a></td>
+                  <td title="Droit exclusif, détenu par un auteur ou son mandataire, d'exploiter à son profit pendant une durée déterminée, une œuvre littéraire, artistique ou scientifique."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#droitsauteur" target="_blank">droitsauteur</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Les artéfacts érudit montrent contenu mixte, mais il semblerait que le schéma 3.0.0
+                     n"accepte pas ce contenu. Valider et modifier au besoin. Modèle de contenu érudit
+                     : declaration{0,1} , annee* , (caracunicode | citation | equationligne | exposant
+                     | indice | liensimple | marquage | marquepage | objetmedia | renvoi | nomorg | nompers)
+                     
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Pages qui se placent en tête d'un ouvrage et qui précèdent le corps de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#liminaire" target="_blank">liminaire</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Considéré comme boilerplate dans version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element to hold the various titles for a document or a document component."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/title-group.html" target="_blank">title-group</a></td>
+                  <td title="Regroupement de l’information sur le titre de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grtitre" target="_blank">grtitre</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Full title of an article."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/article-title.html" target="_blank">article-title</a></td>
+                  <td title="Nom (ou première partie du nom) sous lequel l’article (ou une section de cette dernière) est connu."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#titre" target="_blank">grtitre/titre</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>il existe minimalement 2 balises jats différentes pour une balise titre (article-title
+                     et title)
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Regroupement de l’information sur le ou les auteurs."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grauteur" target="_blank">grauteur</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Type of contribution made by the individual "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/contrib-type.html" target="_blank">contrib/@contrib-type="auteur"</a></td>
+                  <td title="Personne physique ou morale responsable de la création de l’article, et donc, de son contenu intellectuel et/ou artistique, ou d’une partie de celui-ci. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#auteur" target="_blank">auteur</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Il n'y a pas de sémantique attachée au termes utilisés comme valeur d'attribut de
+                     'contrib-type, alors il est possible d'utiliser les termes français pour ce projet.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Unique internal identifier of an element; allows element to be cross-referenced."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/id.html" target="_blank">contrib[@contrib-type="auteur"]/@id</a></td>
+                  <td title="out nom, caractère ou indicatif caractérisant une donnée et permettant de l'identifier ou de la reconnaître comme telle dans toute technique de recherche. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#id_id" target="_blank">auteur/@id</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Summarized description of the content of a document or document component."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/abstract.html" target="_blank">abstract</a></td>
+                  <td title="Présentation succincte du contenu de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#resume" target="_blank">resume</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>The optional @abstract-type attribute may be used to identify special types of abstracts.
+                     Dans les artéfact jats, j'ai du restreindre à un type de résumé car il y en avait
+                     deux.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xml-lang.html" target="_blank">abstract/@xml:lang</a></td>
+                  <td title=""><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#lang_lang" target="_blank">resume/@lang</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for one set of keywords used to describe a document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/kwd-group.html" target="_blank">kwd-group</a></td>
+                  <td title="Regroupement de l’ensemble des mots-clés d’une même langue, dans un article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grmotcle" target="_blank">grmotcle</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xml-lang.html" target="_blank">kwd-group/@xml:lang</a></td>
+                  <td title=""><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#listelang_lang" target="_blank">grmotcle/@lang</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="A keyword is a finding aid used to record one subject term, key phrase, abbreviation, indexing word, taxonomic structure, or other expression that is associated with the whole structure (such as an article). Keywords can be used for identification, searching, and indexing purposes."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/kwd.html" target="_blank">kwd</a></td>
+                  <td title="Mots et/ou expressions qui permettent de représenter les notions et concepts importants exprimés dans l’information contenue dans l’article. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#motcle" target="_blank">motcle</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Main textual portion of the document that conveys the narrative content.&#xA;            "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/body.html" target="_blank">body</a></td>
+                  <td title="Cœur, partie centrale de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#corps" target="_blank">corps</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Headed group of material; the basic structural unit of the body of a document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/sec.html" target="_blank">sec</a></td>
+                  <td title="Une section de plus haut niveau dans un article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#section1" target="_blank">section1</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td>Sections are recursive, that is, various levels of sections are indicated by containment,
+                     not by different names for the subsections. A 'sec' element may contain lower level
+                     sections that are also tagged using the 'sec' element, not tagged explicitly as 'sec2',
+                     'sec3', or 'subsec1', etc.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Headed group of material; the basic structural unit of the body of a document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/sec.html" target="_blank">sec</a></td>
+                  <td title="Une sous-section dans une section de niveau 1."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#section2" target="_blank">section2</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td>Il n'est pas nécessaire d'ajouter la sémantique spécifique à Érudit par l'ajout d'un
+                     attribut dans jats, pour le traitement de la transformation xsl. Le seul positionnement
+                     de la balise 'sec' par rapport aux autres remplit cette fonction. Le traitement est
+                     assez simple avec la force brute dans le script.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Headed group of material; the basic structural unit of the body of a document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/sec.html" target="_blank">sec</a></td>
+                  <td title="Une sous-section dans une section de niveau 2."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#section3" target="_blank">section3</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td>Seuls 2 niveaux de profondeur ont été traités dans la transformation (section1, section2
+                     et section3)
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Heading or title for a structural element."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/title.html" target="_blank">title</a></td>
+                  <td title="Nom (ou première partie du nom) sous lequel l’article (ou une section de cette dernière) est connu"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#titre" target="_blank">sectionX/titre</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>Les titres d'article et les titres de sections sont annotées par deux balises différentes
+                     dans jats.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Textual unit or block; a textual paragraph."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/p.html" target="_blank">p</a></td>
+                  <td title="Ensemble d’alinéas, composé chacun de plusieurs phrases, qui permettent l’expression d’une idée de la pensée de l’auteur."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#http___www.erudit.org_xsd_article_para" target="_blank">para</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Bloc de lignes commençant par un renfoncement (ou parfois cette ligne elle-même)."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#alinea" target="_blank">alinea</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Reference to an object within the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/xref.html" target="_blank">xref</a></td>
+                  <td title="Indication supplémentaire donnée à partir d'un élément pour obtenir un autre élément. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#renvoi" target="_blank">renvoi</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Type of element that is the target of the cross-reference (for example, “figure”, “author-note”, “bibliographic-reference”). The values may be used for type-specific processing or validation."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/ref-type.html" target="_blank">xref/@ref-type</a></td>
+                  <td title="Nature ou genre du renvoi."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#renvoi_typeref" target="_blank">renvoi/@typeref</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Value of the identifier of an associated element; used for linking related elements"><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/rid.html" target="_blank">xref/@rid</a></td>
+                  <td title="Référence à un identifiant"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#idref_idref" target="_blank">renvoi/@idref</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td> Valeur sous la forme 'sdFootnote##sym'</td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Action de faire ressortir une partie de texte par une modification des attributs visuels."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#marquage" target="_blank">marquage</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Used to mark text that should appear in an italic or slanted font.&#xA;            "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/italic.html" target="_blank">italic</a></td>
+                  <td title="Type de marquage : italique"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#marquage_typemarq" target="_blank">marquage/@type="italique"</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Seul le marquage italique a été traité pour la version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Block of graphic or textual material that is identified as a figure, usually bearing a caption and a label such as “Figure 3.” or “Figure”. A 'fig' is defined as an element that would appear in the Table of Figures, if there were one."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/fig.html" target="_blank">fig</a></td>
+                  <td title="Représentation d’une réalité à l’aide d’un dessin, d’une carte, d’un graphique, d’un diagramme, d’une photo, d’une gravure ou autre, qui aide à la compréhension de l’article. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#figure" target="_blank">figure</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td>Traitement superficiel pour la version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Description of and pointer to an external file that holds a media object (for example, an animation, a movie)."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/media.html" target="_blank">media</a></td>
+                  <td title="Information non textuelle (audio, vidéo, image) qui s’insère, de façon linéaire ou en bloc, dans le corps de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#objetmedia" target="_blank">objetmedia</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans la version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="Typically indicates whether a display object (for example, figure, table, boxed text) must be anchored in its exact location within the text or may float to a different location in the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/position.html" target="_blank">media/@position</a></td>
+                  <td title="La mise en forme de l’objet média, par rapport à ce qui précède et à ce qui suit dans le flot du document."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#objetmedia_flot" target="_blank">objetmedia/@flot</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Non traité dans version 1.0.</td>
+               </tr>
+               
+               <tr>
+                  <td title="The external file associated with a 'graphic' holds a picture, illustration, etc., and is usually some form of binary object. The “content” of the 'graphic' element (if any) is not the object itself, but merely information about the object. "><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/graphic.html" target="_blank">graphic</a></td>
+                  <td title="Représentations graphiques dans un livre, une revue ou tout autre travail imprimé pour élucider le texte, tel que des figures, des cartes, des diagrammes, des tableaux, etc. Aussi utilisées afin de représenter des portions de textes trop complexes pour être représentées sous un format textuel. Cet élément sert à indiquer le point d’ancrage de l’image dans le document. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#http___www.erudit.org_xsd_article_image" target="_blank">image</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/id.html" target="_blank">graphic/@id</a></td>
+                  <td title=""><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#id_id" target="_blank">image/@id</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/content-type.html" target="_blank">graphic/@content-type</a></td>
+                  <td title="Nature ou genre de l’image"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#http___www.erudit.org_xsd_article_image_typeimage" target="_blank">image/@typeimage</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Aucune définition dans schéma érudit"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#objetdesc_desc" target="_blank">image/@desc</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Artéfacts montrent valeur "".</td>
+               </tr>
+               
+               <tr>
+                  <td title="The kind of link used with an element. For all elements in this Tag Suite that can take links, this attribute may be either omitted or set to the word “simple”, which means that the link is a simple, one-ended link."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xlink-type.html" target="_blank">graphic/@xlink:type</a></td>
+                  <td title="Aucune définition dans schéma Érudit. Valeur fixe &#34;simple&#34;"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditxlink_xsd.html#http___www.w3.org_1999_xlink_type" target="_blank">image/@xlink:type</a></td>
+                  <td title="La signification de la balise cible est un spécifique de la balise source">cible_specifique</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Extract or extended quoted passage from another work, usually made typographically distinct from surrounding text."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/disp-quote.html" target="_blank">disp-quote</a></td>
+                  <td title="Un passage d’un propos ou d’un écrit, emprunté à une autre ressource, dont on signale le nom de l'auteur et, éventuellement, la notice bibliographique. Il s’agit d’un bloc d’information distinct de ce qui le précède et de ce qui le suit, d’où son nom de « bloc » de citation. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#bloccitation" target="_blank">bloccitation</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>disp-quote peut être utilisé à l'intérieur ou à l'extérieur d'un 'p'. bloccitation
+                     semble être toujours sous 'para'. Traitement partiel dans version 1.0,
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Specifies what prefix character should precede each list item. Bullet: Unordered or bulleted list. Prefix character is a bullet, dash, or other symbol."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/list-type.html" target="_blank">list/@list-type="bullet"</a></td>
+                  <td title="Énumération d’éléments de même nature, les uns à la suite des autres. Chaque élément de la liste est précédé d’un signe, généralement une puce. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#listenonord" target="_blank">listenonord</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Jats : designed to accept any text as its value.</td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/list-type.html" target="_blank">list/@list-type="bullet"</a></td>
+                  <td title="Signe typographique pouvant être utilisé devant les éléments d'une énumération pour les mettre en valeur."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#listenonord_signe" target="_blank">listenonord/@signe</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Artéfacts montrent la valeur "disque". La signification est déjà contenue dans la
+                     valeur "bullet" dans le jats.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Specifies what prefix character should precede each list item. For example, the style may suggest the character type (“simple” or “ordered”), or the style may name the character explicitly (“lower-alpha” for a list numbered “a.”, “b.”, “c.”)."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/list-type.html" target="_blank">list/@list-type=""</a></td>
+                  <td title="Liste ordonnée"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#listeord" target="_blank">listeord</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>Plusieurs valeurs différentes possibles. Le traitement est différent dans les deux
+                     standards : chez érudit, on traite le fait que la liste soit ordonnée/non ordonnée
+                     et puis ont ajoute le type de signe en attribut; chez jats, les deux valeurs sont
+                     contenues dans le choix de l'attribut.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Single item (one entry) in a list of items."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/list-item.html" target="_blank">list-item</a></td>
+                  <td title="Élément d’une liste ordonnée ou non ordonnée."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#elemliste" target="_blank">elemliste</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Material published with an article but following the narrative flow. Modèle de contenu : (label?, title*, (ack | app-group | bio | fn-group | glossary | ref-list | notes | sec)*)"><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/back.html" target="_blank">back</a></td>
+                  <td title="Parties regroupées à la fin d'un article. Modèle de contenu : (grannexe{0,1} merci{0,1} grnotebio{0,1} grbiblio{0,1} grnote{0,1}) "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#partiesann" target="_blank">partiesann</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Regroupement de bibliographies, dans un article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grbiblio" target="_blank">grbiblio</a></td>
+                  <td title="">sans_objet</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="List of bibliographic references for a document or document component."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/ref-list.html" target="_blank">ref-list</a></td>
+                  <td title="Recensement des ouvrages en annexe de l’article, qui indique les références bibliographiques de l’auteur. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#biblio" target="_blank">biblio</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="One item in a bibliographic list."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/ref.html" target="_blank">ref</a></td>
+                  <td title="La description bibliographique complète d’une ressource citée dans l’article décrit. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#http___www.erudit.org_xsd_article_refbiblio" target="_blank">refbiblio</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title="Link to an external file or resource."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/ext-link.html" target="_blank">ext-link</a></td>
+                  <td title="Hyperlien unidirectionnel entre la ressource locale (là où se trouve l’élément dans le document courant) et une ressource externe (au document courant). "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#liensimple" target="_blank">liensimple</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>Traitement effleuré dans la version 1.0. L'ensemble des balises utilisées pour lier
+                     les ressources locales ou externes devraient être ré-examinées. voir aussi l'utilisation
+                     de @xlink:href dans une balise structurante d'une objet, comme 'graphic' ou 'media'
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xlink-type.html" target="_blank">ext-link/@xlink:type</a></td>
+                  <td title="The kind of link used with an element. For all elements in this Tag Suite that can take links, this attribute may be either omitted or set to the word “simple”, which means that the link is a simple, one-ended link."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditxlink_xsd.html#http___www.w3.org_1999_xlink_type" target="_blank">liensimple/@xlink:type</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>Les artéfacts montrent la valeur "simple", valeur fixe selon la doc d'érudit</td>
+               </tr>
+               
+               <tr>
+                  <td title="An address or identifier that permits an XLink application to find a remote resource, for example, a URI (such as a URL or filename) that links to an online site associated with the author or the online definition of a term."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/xlink-href.html" target="_blank">ext-link/@xlink:href</a></td>
+                  <td title="'required'"><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#liensimple" target="_blank">liensimple/@href</a></td>
+                  <td title="La signification de la balise cible est un générique de la balise source">cible_generique</td>
+                  <td>Le schéma érudit demande un attribut 'href' obligatoire pour 'liensimple' et les artéfacts
+                     érudits montrent des attributs 'xlink:href'
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Container element for footnotes that appear at the end of the document."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/fn-group.html" target="_blank">fn-group</a></td>
+                  <td title="Regroupement de l’ensemble des notes de l’article."><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#grnote" target="_blank">grnote</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>Il faut voir ici quel type de style bibliographique est utilisé pour la rédaction,
+                     et de quelle façon le style est soutenu par la structure du balisage. Ce qui est considéré
+                     comme des notes de bas de page n'a vraiment pas la même signification en APA, en Vancouver
+                     (milieu médical d'où vient le jats) et en MLA ou Chicago classique. Cette réflexion
+                     n'a pas été abordée dans la version 1.0.
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title="Additional information tied to a particular location in the text."><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/element/fn.html" target="_blank">fn</a></td>
+                  <td title="Un bref commentaire sur un passage du texte de l’article, situé en retrait du flot normal du texte. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#note" target="_blank">note</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td></td>
+               </tr>
+               
+               <tr>
+                  <td title=""><a href="https://jats.nlm.nih.gov/archiving/tag-library/1.1/attribute/id.html" target="_blank">fn/@id</a></td>
+                  <td title=""><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#id" target="_blank">note/@id</a></td>
+                  <td title="La signification de la balise cible est minimalement similaire à celle de la balise source">similaire</td>
+                  <td>La valeur contenue dans note/@id renvoie à renvoi/@idref. Valeur d'attribut sous la
+                     forme 'sdFootnote##sym'
+                  </td>
+               </tr>
+               
+               <tr>
+                  <td title=""></td>
+                  <td title="Marque en chiffres, nombre attribué à une chose pour la caractériser parmi des choses semblables ou la classer dans une série. Le nombre est souvent accompagné de lettres. "><a href="http://www.erudit.org/xsd/article/3.0.0/doc/eruditarticle_xsd.html#no" target="_blank">no</a></td>
+                  <td title="">sans_objet</td>
+                  <td>Vérifier à quel endroit cette balise est utilisée.</td>
+               </tr>
+               
+            </tbody>
+         </table>
+      </main>
+      <footer></footer>
+   </body>
+</html>
